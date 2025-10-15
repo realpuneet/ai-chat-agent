@@ -25,7 +25,7 @@ function App() {
 
     try {
       // Send POST request to backend /chat endpoint
-      const response = await fetch('http://localhost:3000/chat', {
+      const response = await fetch('https://ai-chat-agent-m5kc.onrender.com/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
