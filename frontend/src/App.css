@@ -50,6 +50,11 @@ html, body {
   width: 100%;
 }
 
+.under-maintainance{
+  text-align: center;
+  font-size: 10vh;
+}
+
 .message {
   width: 100%;
   display: flex;

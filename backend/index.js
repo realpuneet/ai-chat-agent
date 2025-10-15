@@ -53,7 +53,7 @@ const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors({
-  origin: "https://ai-chat-agent-for-you.vercel.app/"
+  origin: "https://ai-chat-agent-for-you.vercel.app"
 })); // Allow cross-origin requests from frontend
 app.use(express.json()); // Parse JSON bodies
 app.use(session({
