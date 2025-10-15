@@ -50,7 +50,7 @@ function App() {
   };
 
   // Handle Enter key press in input
-  const handleKeyPress = (e) => {
+  const handleKeyDown = (e) => {
     if (e.key === 'Enter' && !isLoading) {
       sendMessage();
     }
@@ -87,7 +87,7 @@ function App() {
           type="text"
           value={inputMessage}
           onChange={(e) => setInputMessage(e.target.value)}
-          onKeyPress={handleKeyPress}
+          onKeyDown={handleKeyDown}
           placeholder="Type your message..."
           disabled={isLoading}
         />
