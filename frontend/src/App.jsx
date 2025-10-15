@@ -69,7 +69,7 @@ function App() {
             </div>
           </div>
         ))}
-        <h1 className='under-maintainance'>Site under maintainance</h1>
+        {/* <h1 className='under-maintainance'>Site under maintainance</h1> */}
         {isLoading && (
           <div className="message ai">
             <div className="message-content">
