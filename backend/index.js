@@ -52,7 +52,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
-app.use(cors()); // Allow cross-origin requests from frontend
+app.use(cors({
+  origin: "https://ai-chat-agent-for-you.vercel.app/"
+})); // Allow cross-origin requests from frontend
 app.use(express.json()); // Parse JSON bodies
 app.use(session({
   secret: 'your-secret-key', // Change this to a secure key
