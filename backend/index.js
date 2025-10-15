@@ -54,13 +54,17 @@ const PORT = process.env.PORT || 3001;
 // Middleware
 app.use(cors({
   origin: ["https://ai-chat-agent-for-you.vercel.app", "http://localhost:5173"]
-})); // Allow cross-origin requests from frontend
+}));
+// Allow cross-origin requests from frontend
 app.use(express.json()); // Parse JSON bodies
 app.use(session({
   secret: 'IUihjbjdwbhguysUIUYIjbb86876eruhajHGJHFcshhujhdfiuw', // Change this to a secure key
   resave: false,
   saveUninitialized: true,
-  cookie: { secure: false } // Set to true if using HTTPS
+  cookie: { secure: false }, // Set to true if using HTTPS
+  store: new (require('connect-mongo')({
+    mongoUrl: process.env.MONGODB_URI || 'mongodb://localhost:27017/aibotagent'
+  }))()
 }));
 
 // Chat endpoint
